@@ -1,0 +1,1 @@
+{"name":"Local: unboundedsybsetsum","url":"c:\\Users\\Lenovo\\Desktop\\cp layout\\dp\\unboundedsybsetsum.cpp","tests":[{"id":1631970439870,"input":"6\n1 2 3 4 5 6\n3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Lenovo\\Desktop\\cp layout\\dp\\unboundedsybsetsum.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: unboundedknapsack","url":"c:\\Users\\Lenovo\\Desktop\\cp layout\\dp\\unboundedknapsack.cpp","tests":[{"id":1631970089411,"input":"2\n1 50\n1 30\n100","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Lenovo\\Desktop\\cp layout\\dp\\unboundedknapsack.cpp","group":"local","local":true}

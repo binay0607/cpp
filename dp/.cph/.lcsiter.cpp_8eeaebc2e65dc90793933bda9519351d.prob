@@ -1,0 +1,1 @@
+{"name":"Local: lcsiter","url":"c:\\Users\\Lenovo\\Desktop\\cp layout\\dp\\lcsiter.cpp","tests":[{"id":1632234853705,"input":"abcefg\nabcefdg","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Lenovo\\Desktop\\cp layout\\dp\\lcsiter.cpp","group":"local","local":true}

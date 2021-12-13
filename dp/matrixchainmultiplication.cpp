@@ -1,0 +1,2 @@
+// here we are going to multiply multiple matrix, but we have to choose a optimal way to paranthesize them to make minimum cost
+// if A is 3X4 and B is 4X5 then the cost will be number of multiplication needed i.e. 3*4*5= 60

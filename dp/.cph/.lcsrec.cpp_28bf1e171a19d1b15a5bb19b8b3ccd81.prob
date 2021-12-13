@@ -1,0 +1,1 @@
+{"name":"Local: lcsrec","url":"c:\\Users\\Lenovo\\Desktop\\cp layout\\dp\\lcsrec.cpp","tests":[{"id":1632234194903,"input":"abcefg\naxxxxxxxxxxxxxxc","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Lenovo\\Desktop\\cp layout\\dp\\lcsrec.cpp","group":"local","local":true}

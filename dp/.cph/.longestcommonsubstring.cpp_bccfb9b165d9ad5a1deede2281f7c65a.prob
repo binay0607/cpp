@@ -1,0 +1,1 @@
+{"name":"Local: longestcommonsubstring","url":"c:\\Users\\Lenovo\\Desktop\\cp layout\\dp\\longestcommonsubstring.cpp","tests":[{"id":1632236727540,"input":"abcdefxyzef\nabcdef","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Lenovo\\Desktop\\cp layout\\dp\\longestcommonsubstring.cpp","group":"local","local":true}

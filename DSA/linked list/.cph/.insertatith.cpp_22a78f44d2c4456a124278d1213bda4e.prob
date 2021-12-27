@@ -1,0 +1,1 @@
+{"name":"Local: insertatith","url":"c:\\Users\\Lenovo\\Desktop\\cp layout\\DSA\\linked list\\insertatith.cpp","tests":[{"id":1640371452776,"input":"10 20 30 40 -1\n3 50","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Lenovo\\Desktop\\cp layout\\DSA\\linked list\\insertatith.cpp","group":"local","local":true}

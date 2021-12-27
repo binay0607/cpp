@@ -1,0 +1,1 @@
+{"name":"Local: subsetsum","url":"c:\\Users\\Lenovo\\Desktop\\cp layout\\Backtrcking\\subsetsum.cpp","tests":[{"id":1640497931720,"input":"8 2\n4 1 4 4 2 4 1 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Lenovo\\Desktop\\cp layout\\Backtrcking\\subsetsum.cpp","group":"local","local":true}

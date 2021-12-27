@@ -1,0 +1,1 @@
+{"name":"Local: appendntofirst","url":"c:\\Users\\Lenovo\\Desktop\\cp layout\\DSA\\linked list\\appendntofirst.cpp","tests":[{"id":1640458273706,"input":"1\n10 6 77 90 61 67 100  -1\n4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Lenovo\\Desktop\\cp layout\\DSA\\linked list\\appendntofirst.cpp","group":"local","local":true}

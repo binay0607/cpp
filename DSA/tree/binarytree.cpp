@@ -21,12 +21,7 @@ using namespace std;
 #define dp2(n,k) int** dp = new int*[n+1];for(int i=0;i<=n;i++){dp[i] = new int[k+1];}
 #define M           1000000007
 #define INF         1e18
-int sumofallnodes(btnode* root){
-    if(root==NULL){
-        return 0;
-    }
-    return root->data+sumofallnodes(root->left)+sumofallnodes(root->right);
-}
+
 
 // the header file is handling taking input and printing;
 int main(){
@@ -39,7 +34,6 @@ cin.tie(NULL);
     }
 
     btnode* root= takeinput(nodes);
-    cout<<sumofallnodes(root);
     // printtree(root);
 
 }

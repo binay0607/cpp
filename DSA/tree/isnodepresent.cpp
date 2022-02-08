@@ -21,13 +21,17 @@ using namespace std;
 #define dp2(n,k) int** dp = new int*[n+1];for(int i=0;i<=n;i++){dp[i] = new int[k+1];}
 #define M           1000000007
 #define INF         1e18
-int sumofallnodes(btnode* root){
+
+bool isnodepresent(btnode* root,int value){
     if(root==NULL){
         return 0;
     }
-    return root->data+sumofallnodes(root->left)+sumofallnodes(root->right);
-}
+    if(root->data==value){
+        return 1;
 
+    }
+    return (isnodepresent(root->left,value)| isnodepresent(root->right,value));
+}
 // the header file is handling taking input and printing;
 int main(){
 ios_base::sync_with_stdio(false);
@@ -39,7 +43,8 @@ cin.tie(NULL);
     }
 
     btnode* root= takeinput(nodes);
-    cout<<sumofallnodes(root);
-    // printtree(root);
+    int value=nodes[nodes.size()-1];
+    if(isnodepresent(root,value))cout<<"Present"<<nl;
+    else cout<<"Not Present"<<nl;
 
 }

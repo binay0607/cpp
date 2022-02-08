@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-#include "binarytreeheader.h"
 using namespace std;
 #define vi vector<int>
 #define pii pair<int,int>
@@ -21,25 +20,36 @@ using namespace std;
 #define dp2(n,k) int** dp = new int*[n+1];for(int i=0;i<=n;i++){dp[i] = new int[k+1];}
 #define M           1000000007
 #define INF         1e18
-int sumofallnodes(btnode* root){
-    if(root==NULL){
-        return 0;
-    }
-    return root->data+sumofallnodes(root->left)+sumofallnodes(root->right);
-}
-
-// the header file is handling taking input and printing;
 int main(){
 ios_base::sync_with_stdio(false);
 cin.tie(NULL);
-    vector<int> nodes;
-    int node;
-    while(cin>>node){
-        nodes.push_back(node);
-    }
+    int t;cin>>t;
+    while(t--){
+		int n;cin>>n;
+		vi a(n);
+		for(int i=0;i<n;i++){
+			cin>>a[i];
+		}
+		if(n==1 || n==2){
+			cout<<0<<nl;
+			continue;
+		}
+		sort(all(a));
+		int diff=abs(a[1]-a[0]);
+		int maxx=1;
+		// cout<<maxx<<nl;
+		int maxx_till_now=-1;
+		
+		for(int i=1;i+1<n;i++){
+			if(abs(a[i+1]-a[i])==diff){
+				maxx++;
+			}else{
+				diff=abs(a[i+1]-a[i]);
+				maxx=1;
+			}
+			maxx_till_now=max(maxx,maxx_till_now);
 
-    btnode* root= takeinput(nodes);
-    cout<<sumofallnodes(root);
-    // printtree(root);
-
+		}
+		cout<<n-maxx_till_now-1<<nl;
+	}
 }

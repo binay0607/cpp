@@ -21,13 +21,19 @@ using namespace std;
 #define dp2(n,k) int** dp = new int*[n+1];for(int i=0;i<=n;i++){dp[i] = new int[k+1];}
 #define M           1000000007
 #define INF         1e18
-int sumofallnodes(btnode* root){
-    if(root==NULL){
-        return 0;
-    }
-    return root->data+sumofallnodes(root->left)+sumofallnodes(root->right);
-}
 
+
+pair<int,bool> checkbalance(btnode* root){
+    if(root==NULL){
+        return make_pair(0, 1);
+    }
+    pair<int,bool> ltree= checkbalance(root->left);
+    pair<int,bool> rtree= checkbalance(root->right);
+    if(abs(ltree.ff-rtree.ff)>1 || rtree.second==0 || ltree.second==0){
+        return make_pair(1+max(ltree.ff,rtree.ff),0);
+    }
+    return make_pair(1+max(rtree.ff,ltree.ff),1);
+}
 // the header file is handling taking input and printing;
 int main(){
 ios_base::sync_with_stdio(false);
@@ -39,7 +45,8 @@ cin.tie(NULL);
     }
 
     btnode* root= takeinput(nodes);
-    cout<<sumofallnodes(root);
+    pair<int,bool>ans=checkbalance(root);
+    cout<<ans.second<<nl;
     // printtree(root);
 
 }

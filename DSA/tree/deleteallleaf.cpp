@@ -21,13 +21,46 @@ using namespace std;
 #define dp2(n,k) int** dp = new int*[n+1];for(int i=0;i<=n;i++){dp[i] = new int[k+1];}
 #define M           1000000007
 #define INF         1e18
-int sumofallnodes(btnode* root){
-    if(root==NULL){
-        return 0;
+void printliketree(btnode* root){
+    queue<btnode*> q;
+    q.push(root);
+    q.push(NULL);
+    while(!q.empty()){
+        btnode* front= q.front();
+        if(front==NULL)break;
+        while(front){
+            cout<<front->data<<" ";
+            
+            // for mirror just switch the seq
+            if(front->left){
+                q.push(front->left);
+
+            }
+            if(front->right){
+                q.push(front->right);
+            }
+            q.pop();
+            front=q.front();
+        }
+        cout<<nl;
+        q.pop();
+        q.push(NULL);
+
     }
-    return root->data+sumofallnodes(root->left)+sumofallnodes(root->right);
 }
 
+
+btnode* deleteallleaf(btnode* root){
+    if(root==NULL){
+        return NULL;
+    }
+    if(root->left==NULL && root->right==NULL){
+        return NULL;
+    }
+    root->left= deleteallleaf(root->left);
+    root->right=deleteallleaf(root->right);
+    return root;
+}
 // the header file is handling taking input and printing;
 int main(){
 ios_base::sync_with_stdio(false);
@@ -39,7 +72,7 @@ cin.tie(NULL);
     }
 
     btnode* root= takeinput(nodes);
-    cout<<sumofallnodes(root);
-    // printtree(root);
+    root= deleteallleaf(root);
+    printliketree(root);
 
 }

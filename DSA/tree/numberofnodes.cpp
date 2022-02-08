@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#include "binarytreeheader.h"
 using namespace std;
 #define vi vector<int>
 #define pii pair<int,int>
@@ -11,52 +12,35 @@ using namespace std;
 #define pf push_front
 #define mp make_pair
 #define ppc __builtin_popcount
+#define fs(x)	 	cout<<fixed<<showpoint<<setprecision((x))
 #define rep(i,a,b)  for(int i=a;i<b;i++)
 #define rrep(i,a,b) for(int i=a;i>=b;i--)
 #define ceel(a,b)   ((a+b-1)/b)
 #define all(x)      (x).begin(),(x).end()
 #define ll          long long
-#define dp(n,k) int** dp = new int*[n+1];for(int i=0;i<=n;i++){dp[i] = new int[k+1];}
+#define dp2(n,k) int** dp = new int*[n+1];for(int i=0;i<=n;i++){dp[i] = new int[k+1];}
 #define M           1000000007
 #define INF         1e18
 
-struct Node{
-    int data;
-    struct Node* left;
-    struct Node* right;
-    // constructor
-    Node(int val){
-        data=val;
-        left=NULL;
-        right=NULL;
-
-    }
-    
-};
-int countnode(Node* root){
+int numofnodes(btnode* root){
     if(root==NULL){
         return 0;
     }
-    return countnode(root->left)+countnode(root->right)+1;
+    return 1+numofnodes(root->left)+numofnodes(root->right);
 }
 
-
-
-
+// the header file is handling taking input and printing;
 int main(){
 ios_base::sync_with_stdio(false);
 cin.tie(NULL);
-    struct Node* root=new Node(1);
-    root->left= new Node(2);
-    root->right=new Node(3);
+    vector<int> nodes;
+    int node;
+    while(cin>>node){
+        nodes.push_back(node);
+    }
 
-    root->left->left = new Node(4);
-    root->left->right= new Node(5);
-    root->right->left = new Node(6);
-    root->right->right= new Node(7);
-    cout<<countnode(root);
+    btnode* root= takeinput(nodes);
+    cout<<numofnodes(root);
+    // printtree(root);
 
-    // 1
-    // 2 3
-    // 4 5 6 7
 }

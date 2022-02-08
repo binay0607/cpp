@@ -1,0 +1,1 @@
+{"name":"Local: mirrortree","url":"c:\\Users\\Lenovo\\Desktop\\cp layout\\DSA\\tree\\mirrortree.cpp","tests":[{"id":1643866053220,"input":"5 10 6 2 3 -1 -1 -1 -1 -1 9 -1 -1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Lenovo\\Desktop\\cp layout\\DSA\\tree\\mirrortree.cpp","group":"local","local":true}

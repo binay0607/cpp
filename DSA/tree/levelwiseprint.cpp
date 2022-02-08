@@ -21,12 +21,28 @@ using namespace std;
 #define dp2(n,k) int** dp = new int*[n+1];for(int i=0;i<=n;i++){dp[i] = new int[k+1];}
 #define M           1000000007
 #define INF         1e18
-int sumofallnodes(btnode* root){
-    if(root==NULL){
-        return 0;
+
+
+void printlevelwise(btnode* root){
+    queue<btnode*> q;
+    q.push(root);
+    while(!q.empty()){
+        btnode* front= q.front();
+        q.pop();
+        int l=-1,r=-1;
+        if(front->left){
+            l=front->left->data;
+            q.push(front->left);
+
+        }
+        if(front->right){
+            r=front->right->data;
+            q.push(front->right);
+        }
+        cout<<front->data<<": "<<"L"<<l<<" "<<"R"<<r<<nl;
     }
-    return root->data+sumofallnodes(root->left)+sumofallnodes(root->right);
 }
+
 
 // the header file is handling taking input and printing;
 int main(){
@@ -39,7 +55,6 @@ cin.tie(NULL);
     }
 
     btnode* root= takeinput(nodes);
-    cout<<sumofallnodes(root);
-    // printtree(root);
+    printlevelwise(root);
 
 }

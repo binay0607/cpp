@@ -1,0 +1,1 @@
+{"name":"Local: checkbst","url":"c:\\Users\\Lenovo\\Desktop\\cp layout\\DSA\\binary search tree\\checkbst.cpp","tests":[{"id":1644378999773,"input":"3 1 5 -1 2 -1 -1 -1 -1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Lenovo\\Desktop\\cp layout\\DSA\\binary search tree\\checkbst.cpp","group":"local","local":true}

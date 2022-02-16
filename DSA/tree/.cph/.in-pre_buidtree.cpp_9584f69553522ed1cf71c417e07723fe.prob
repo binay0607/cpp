@@ -1,1 +1,0 @@
-{"name":"Local: in-pre_buidtree","url":"c:\\Users\\Lenovo\\Desktop\\cp layout\\DSA\\tree\\in-pre_buidtree.cpp","tests":[{"id":1643944471240,"input":"6\n5 6 2 3 9 10 \n2 6 3 9 5 10","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Lenovo\\Desktop\\cp layout\\DSA\\tree\\in-pre_buidtree.cpp","group":"local","local":true}

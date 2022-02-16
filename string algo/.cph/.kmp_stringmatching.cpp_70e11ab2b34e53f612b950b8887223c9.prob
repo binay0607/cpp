@@ -1,0 +1,1 @@
+{"name":"Local: kmp_stringmatching","url":"c:\\Users\\Lenovo\\Desktop\\cpp layout\\string algo\\kmp_stringmatching.cpp","tests":[{"id":1644902475025,"input":"abcdabcdabcg\nabcdabcg","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Lenovo\\Desktop\\cpp layout\\string algo\\kmp_stringmatching.cpp","group":"local","local":true}

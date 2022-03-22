@@ -1,4 +1,8 @@
 // we have to find the pattern in the text
+bina
+
+
+
 #include<bits/stdc++.h>
 using namespace std;
 #define vi vector<int>

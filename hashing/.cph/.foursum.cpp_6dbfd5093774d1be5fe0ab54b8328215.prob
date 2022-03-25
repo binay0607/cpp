@@ -1,0 +1,1 @@
+{"name":"Local: foursum","url":"c:\\Users\\Lenovo\\Desktop\\cpp layout\\hashing\\foursum.cpp","tests":[{"id":1648125881358,"input":"6\n1 0 -1 0 -2 2\n0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Lenovo\\Desktop\\cpp layout\\hashing\\foursum.cpp","group":"local","local":true}

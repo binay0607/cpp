@@ -1,4 +1,5 @@
 // to check how much val one can acquire given a particular wt
+//its 0-1 knapsack
 #include<bits/stdc++.h>
 using namespace std;
 #define vi vector<int>

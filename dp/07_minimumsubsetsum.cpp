@@ -51,7 +51,7 @@ cin.tie(NULL);
     }
     int ans;
     for(int i=k;i>=0;i--){
-        if(dp[n][i]){
+        if(dp[n][i]){ //highest k value possible considering all n elements
             ans=i;
             break;
         }

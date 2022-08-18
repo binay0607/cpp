@@ -90,7 +90,7 @@ Node* reverseLL(Node *head) {
 	return smallAns;
 }
 
-// this is an iterative approach in recursive way here we keep trach of both prev and next and keep changing the links
+// this is an iterative approach in recursive way here we keep track of both prev and next and keep changing the links
 Node *reverse(Node *head,Node *prev)
 {
 if(head==NULL)

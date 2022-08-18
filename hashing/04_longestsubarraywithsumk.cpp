@@ -1,3 +1,4 @@
+// in total subarray map has count of subarraysum and in longest subarray map has index of the prefisum
 #include<bits/stdc++.h>
 using namespace std;
 #define vi vector<int>
@@ -23,18 +24,37 @@ using namespace std;
 int main(){
 ios_base::sync_with_stdio(false);
 cin.tie(NULL);
-    string s;cin>>s;
-    vector<int> map(256,-1);
-    int left=0,right=0;
-    int n=s.size();
-    int len=0;
-    while(right<n){
-        if(map[s[right]]!=-1){
-            left=max(map[s[right]]+1,left);
-        }
-        map[s[right]]=right;
-        len=max(len,right-left+1);
-        right++;
+    int n;cin>>n;
+    vi a(n);
+    unordered_map<int ,int> mp;
+    for(int i=0;i<n;i++){
+        cin>>a[i];
     }
-    cout<<len<<nl;
+    int k;cin>>k;
+   
+    int sum=0;
+    int ans=-1;
+    for(int i=0;i<n;i++){
+      
+        sum+=a[i];
+        // cout<<i<<" "<<a[i]<<" "<<sum<<nl;
+        if(sum==k){
+            ans=max(ans,i+1);
+        }else {
+            if(mp.find(sum-k)!=mp.end()){
+                // cout<<sum-k<<" "<<mp[sum-k]<<nl;
+                ans=max(ans,(i-mp[sum-k]));
+            
+            }
+            
+        }
+        if(mp.find(sum)==mp.end()){
+            mp[sum]=i;
+        }
+        
+        cout<<mp[sum]<<nl;
+        
+    }
+    cout<<ans<<nl;
+    
 }

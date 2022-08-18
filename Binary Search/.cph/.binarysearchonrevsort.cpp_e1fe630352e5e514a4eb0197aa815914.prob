@@ -1,0 +1,1 @@
+{"name":"Local: binarysearchonrevsort","url":"c:\\Users\\Lenovo\\Desktop\\cpp layout\\Binary Search\\binarysearchonrevsort.cpp","tests":[{"id":1648695203438,"input":"5\n20 13 9 7 2\n2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Lenovo\\Desktop\\cpp layout\\Binary Search\\binarysearchonrevsort.cpp","group":"local","local":true}

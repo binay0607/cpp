@@ -1,4 +1,4 @@
-// to find number of  subset whose sum is equal 
+//find a^n in logn complexity  with modular exponentiation
 #include<bits/stdc++.h>
 using namespace std;
 #define vi vector<int>
@@ -12,41 +12,31 @@ using namespace std;
 #define pf push_front
 #define mp make_pair
 #define ppc __builtin_popcount
+#define fs(x)	 	cout<<fixed<<showpoint<<setprecision((x))
 #define rep(i,a,b)  for(int i=a;i<b;i++)
 #define rrep(i,a,b) for(int i=a;i>=b;i--)
 #define ceel(a,b)   ((a+b-1)/b)
 #define all(x)      (x).begin(),(x).end()
 #define ll          long long
+#define dp2(n,k) int** dp = new int*[n+1];for(int i=0;i<=n;i++){dp[i] = new int[k+1];}
 #define M           1000000007
 #define INF         1e18
 int main(){
 ios_base::sync_with_stdio(false);
 cin.tie(NULL);
-    int n;cin>>n;
-    int a[n];
-    for(int i=0;i<n;i++){
-        cin>>a[i];
-    }
-    int k;cin>>k;
-    int **dp= new int*[n+1];
-    rep(i,0,n+1){
-        dp[i]=new int[k+1];
-    }
-    rep(i,0,k+1){
-        dp[0][i]=0;
-    }
-    rep(i,0,n+1){
-        dp[i][0]=1;
-    }
-  
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=k;j++){
-            if(a[i-1]<=j){
-                dp[i][j]=dp[i-1][j-a[i-1]] + dp[i-1][j];
-            }else{
-                dp[i][j]=dp[i-1][j];
-            }
+    ll a,n;cin>>a>>n;
+    //a=base, n=power
+   ll res=1;
+    while(n!=0){
+        if(n%2){
+            res=((res%M)*(a%M))%M;
+            n--;
         }
+        n/=2;
+        a=((a%M)*(a%M))%M;
+        cout<<res<<" "<<a<<nl;
+        //divide power by 2 and take square of base
+
     }
-    cout<<dp[n][k]<<nl;
+    cout<<res<<nl;
 }

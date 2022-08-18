@@ -1,4 +1,3 @@
-// in total subarray map has count of subarraysum and in longest subarray map has index of the prefisum
 #include<bits/stdc++.h>
 using namespace std;
 #define vi vector<int>
@@ -26,36 +25,20 @@ ios_base::sync_with_stdio(false);
 cin.tie(NULL);
     int n;cin>>n;
     vi a(n);
-    int prefixsum[n];
-    unordered_map<int ,int> mp;
-   
     for(int i=0;i<n;i++){
         cin>>a[i];
     }
     int k;cin>>k;
-    // int prefix[n];
-    // prefix[0]=a[0];  //also here we can just to a single integer sum
-    int sum=0;
-    int ans=-1;
-    for(int i=0;i<n;i++){
-        // if(i>0){
-        //     prefix[i]=prefix[i-1]+a[i];
-        // }
-        sum+=a[i];
-        if(sum==k){
-            ans=max(ans,i+1);
-        }else if(sum>k){
-            if(mp.find(sum-k)!=mp.end()){
-        
-                ans=max(ans,(i-mp[sum-k]));
-            
-            }else{
-                mp[sum]=i;
-            }
-            
+    int i=0,j=n-1;
+    while(i<=j){
+        int mid=i+(j-i)/2;
+        if(a[mid]==k){
+            cout<<mid<<nl;
+            return 0;
+        }else if(a[mid]<k){
+            j=mid-1;
+        }else{
+            i=mid+1;
         }
-        
     }
-    cout<<ans<<nl;
-    
 }
